@@ -1,9 +1,11 @@
 package adapter;
 
-public class Adapter {
+public class Adapter implements USBPort {
     SDCard card;
+    public Adapter(SDCard card) {
+        this.card = card;
+    }
     public void insert() {
-        card = new SDCard();
         card.plugin();
     }
 }
